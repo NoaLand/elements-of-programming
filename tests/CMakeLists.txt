@@ -10,6 +10,7 @@ FetchContent_MakeAvailable(googletest)
 
 add_executable(
         elements_of_programming_tests
+        test_main.cpp
         chapter1_tests.cpp
 )
 
