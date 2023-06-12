@@ -19,3 +19,13 @@ TEST(representational_equality, A_and_B_should_not_be_representational_equality_
     auto res = memcmp(&left, &right, sizeof(struct representational_equality_verification_left));
     ASSERT_NE(res, 0) << "left and right should not be representational equality, since they have different binary combination";
 }
+
+TEST(representational_equality, left_class_and_right_class_should_not_be_representational_equality_when_their_class_defined_in_diff_sort) {
+    representational_equality_verification_left_class left{ 1, 2, 3 };
+    representational_equality_verification_right_class right { 3, 2, 1 };
+
+    ASSERT_EQ(sizeof(representational_equality_verification_left_class), sizeof(representational_equality_verification_right_class));
+
+    auto res = memcmp(&left, &right, sizeof(representational_equality_verification_left_class));
+    ASSERT_NE(res, 0) << "left and right should not be representational equality, since they have different binary combination";
+}
