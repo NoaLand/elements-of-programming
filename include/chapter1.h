@@ -1,13 +1,13 @@
 #ifndef ELEMENTS_OF_PROGRAMMING_CHAPTER1_H
 #define ELEMENTS_OF_PROGRAMMING_CHAPTER1_H
 
-struct A {
+struct representational_equality_verification_left {
     int a;
     int b;
     int c;
 };
 
-struct B {
+struct representational_equality_verification_right {
     int c;
     int b;
     int a;
