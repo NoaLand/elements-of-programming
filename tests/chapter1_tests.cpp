@@ -3,7 +3,7 @@
 #include "cstring"
 #include "chapter1.h"
 
-TEST(representational_equality, A_and_B_should_not_be_representational_equality_when_their_fields_are_in_different_sort) {
+TEST(representational_equality, left_struct_and_right_struct_should_not_be_representational_equality_when_their_fields_are_in_different_sort) {
     struct representational_equality_verification_left left = {
             .a = 1,
             .b = 2,
