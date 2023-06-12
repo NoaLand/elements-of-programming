@@ -16,6 +16,8 @@ TEST(representational_equality, A_and_B_should_not_be_representational_equality_
             .a = 1
     };
 
+    ASSERT_EQ(sizeof(struct representational_equality_verification_left), sizeof(struct representational_equality_verification_right));
+
     auto res = memcmp(&left, &right, sizeof(struct representational_equality_verification_left));
     ASSERT_NE(res, 0) << "left and right should not be representational equality, since they have different binary combination";
 }
